@@ -15262,7 +15262,7 @@ ROM_START( fb2010 )
 	ROM_COPY( "graphics", 0x00000, 0x04000, 0x2000 )
 	ROM_COPY( "graphics", 0x10000, 0x06000, 0x2000 )
 
-	ROM_REGION( 0x200, "proms", 0 ) // palette (taken from nfb96se, not verified)
+	ROM_REGION( 0x200, "proms", 0 ) // palette (taken from nfb96se, verified)
 	ROM_LOAD( "chu19.bin", 0x0000, 0x0100, BAD_DUMP CRC(fafc43ad) SHA1(e94592b83f19e5f9b6205473c1e06b36405ebfc2) )
 	ROM_LOAD( "chu20.bin", 0x0100, 0x0100, BAD_DUMP CRC(05224f73) SHA1(051c3ee9c63f5436e4f6c355fc308f37910a88ef) )
 ROM_END
@@ -15286,7 +15286,7 @@ void cmaster_state::init_fb2010()
 		ROM[i] = x;
 	}
 
-	// some kind of protection? checks something in NVRAM after a few spins?
+	// protection: after 15000 spins the game locks and waiting the activation from manumafactured.
 	// TODO: work out how to handle this without a patch, doesn't seem 100% related to port read below like in other games?
 	ROM[0x10dc] = 0x00;
 	ROM[0x10dd] = 0x00;
@@ -15442,12 +15442,12 @@ ROM_START( nfb96seb )
 	ROM_LOAD( "dogmx3", 0x2000, 0x2000, CRC(f1a8aea8) SHA1(c20b779a73856d94e862d87ad337c9501da86691) )
 	ROM_LOAD( "dogmx4", 0x0000, 0x2000, CRC(be31f6fa) SHA1(b522ff520b3fbb34c55c7bb1fe7dfeecd593d6be) )
 
-	// taken from new fruit bonus '96, might be wrong
+	// taken from new fruit bonus '96, (should be chu19.bin = chu79.bin / chu20.bin = chu84.bin)
 	ROM_REGION( 0x200, "proms", 0 ) // palette
 	ROM_LOAD( "chu19.bin", 0x0000, 0x0100, CRC(fafc43ad) SHA1(e94592b83f19e5f9b6205473c1e06b36405ebfc2) )
 	ROM_LOAD( "chu20.bin", 0x0100, 0x0100, CRC(05224f73) SHA1(051c3ee9c63f5436e4f6c355fc308f37910a88ef) )
 
-	ROM_REGION( 0x100, "proms2", 0 ) // colours again?
+	ROM_REGION( 0x100, "proms2", 0 ) // (chu1920.bin is the merged of one rom of the chu19.bin & chu20.bin , and the location on board is U84 )
 	ROM_LOAD( "chu1920.bin", 0x0000, 0x0100, CRC(71b0e11d) SHA1(1d2a2a31d8571f580c0cb7f4833823841072b31f) )
 ROM_END
 
@@ -16557,7 +16557,7 @@ ROM_START( cmpacman )
 	ROM_REGION( 0x10000, "user1", 0 )
 	ROM_LOAD( "8.u53",  0x0000, 0x10000, CRC(e92443d3) SHA1(4b6ca4521841610054165f085ae05510e77af191) )
 
-	/* proms taken from cmv4, probably wrong  */
+	/* the proms are the same as cmv 4*/
 	ROM_REGION( 0x200, "proms", 0 )
 	ROM_LOAD( "82s129.u84", 0x0000, 0x0100, CRC(0489b760) SHA1(78f8632b17a76335183c5c204cdec856988368b0) )
 	ROM_LOAD( "82s129.u79", 0x0100, 0x0100, CRC(21eb5b19) SHA1(9b8425bdb97f11f4855c998c7792c3291fd07470) )
@@ -16703,14 +16703,14 @@ ROM_START( cmtetrsa )
 	ROM_COPY( "maincpu", 0x1a000, 0x3000, 0x0800 )      /* src-dest-size */ // #07
 	ROM_COPY( "maincpu", 0x18800, 0x3800, 0x0800 )      /* src-dest-size */ // #08
 	ROM_COPY( "maincpu", 0x10000, 0x4000, 0x0800 )      /* src-dest-size */ // #09
-	ROM_COPY( "maincpu", 0x15000, 0x4800, 0x0800 )      /* src-dest-size */ // #10
-	ROM_COPY( "maincpu", 0x14800, 0x5000, 0x0800 )      /* src-dest-size */ // #11
+	ROM_COPY( "maincpu", 0x15800, 0x4800, 0x0800 )      /* src-dest-size */ // #10
+	ROM_COPY( "maincpu", 0x13000, 0x5000, 0x0800 )      /* src-dest-size */ // #11
 	ROM_COPY( "maincpu", 0x1a800, 0x5800, 0x0800 )      /* src-dest-size */ // #12
 	ROM_COPY( "maincpu", 0x11000, 0x6000, 0x0800 )      /* src-dest-size */ // #13
 	ROM_COPY( "maincpu", 0x11800, 0x6800, 0x0800 )      /* src-dest-size */ // #14
 	ROM_COPY( "maincpu", 0x1b000, 0x7000, 0x0800 )      /* src-dest-size */ // #15
-	ROM_COPY( "maincpu", 0x1f000, 0x7800, 0x0800 )      /* src-dest-size */ // #16
-	ROM_COPY( "maincpu", 0x1f800, 0x8000, 0x0800 )      /* src-dest-size */ // #17
+	ROM_COPY( "maincpu", 0x16800, 0x7800, 0x0800 )      /* src-dest-size */ // #16
+	ROM_COPY( "maincpu", 0x17000, 0x8000, 0x0800 )      /* src-dest-size */ // #17
 	ROM_COPY( "maincpu", 0x13800, 0x8800, 0x0800 )      /* src-dest-size */ // #18
 	ROM_COPY( "maincpu", 0x19000, 0x9000, 0x0800 )      /* src-dest-size */ // #19
 	ROM_COPY( "maincpu", 0x1b800, 0x9800, 0x0800 )      /* src-dest-size */ // #20
@@ -16718,7 +16718,8 @@ ROM_START( cmtetrsa )
 	ROM_COPY( "maincpu", 0x10800, 0xa800, 0x0800 )      /* src-dest-size */ // #22
 	ROM_COPY( "maincpu", 0x18000, 0xb000, 0x0800 )      /* src-dest-size */ // #23
 	ROM_COPY( "maincpu", 0x12800, 0xb800, 0x0800 )      /* src-dest-size */ // #24
-	ROM_COPY( "maincpu", 0x13000, 0xc000, 0x0800 )      /* src-dest-size */ // #25
+	ROM_COPY( "maincpu", 0x15000, 0xc000, 0x0800 )      /* src-dest-size */ // #25
+	ROM_COPY( "maincpu", 0x14800, 0xc800, 0x0800 )      /* src-dest-size */ // #26
 
 	ROM_REGION( 0x18000, "gfx1", 0 )
 	ROM_LOAD( "cm89-tetri-7.u16", 0x00000,  0x8000, CRC(2f5c94bd) SHA1(d99bcaa788f8abf5c75b29572d53be109b20c4bb) )
@@ -16734,7 +16735,6 @@ ROM_START( cmtetrsa )
 	ROM_REGION( 0x10000, "user1", 0 )
 	ROM_LOAD( "cm89-tetri-8.u53",  0x0000, 0x10000, CRC(e92443d3) SHA1(4b6ca4521841610054165f085ae05510e77af191) )
 
-	/* proms taken from cmv4, probably wrong  */
 	ROM_REGION( 0x200, "proms", 0 )
 	ROM_LOAD( "82s129.u84", 0x0000, 0x0100, CRC(0489b760) SHA1(78f8632b17a76335183c5c204cdec856988368b0) )
 	ROM_LOAD( "82s129.u79", 0x0100, 0x0100, CRC(21eb5b19) SHA1(9b8425bdb97f11f4855c998c7792c3291fd07470) )
@@ -19103,7 +19103,7 @@ GAMEL( 1997, pokonl97,  0,        amcoe1,   pokonl97,  cmaster_state,  init_po33
 GAME(  1998, match98,   0,        amcoe1a,  match98,   cmaster_state,  init_match133,  ROT0, "Amcoe",   "Match '98 (ver. 1.33)",                                        0 )
 
 
-/* The Sub-PCB has a printed sticker denoting C1, C2, D or DK for the type of FPGA decryption chip used */
+/* The Sub-PCB has a printed sticker denoting C1, C2, D, DK or G for the type of FPGA decryption chip used */
 /* There is known to be a special IOWA version running on the Texas C2 hardware with roms FB96P IA, FB96L IA & FB96H IA with a (c) 2000 Amcoe */
 GAMEL( 1996, nfb96,     0,        amcoe2,   nfb96,     cmaster_state,  init_nfb96_c1,   ROT0, "Amcoe",   "New Fruit Bonus '96 Special Edition (v3.63, C1 PCB)",          0,                 layout_nfb96 ) /* ver. 02-3.63 C1 Sub-PCB */
 GAMEL( 1996, nfb96a,    nfb96,    amcoe2,   nfb96,     cmaster_state,  init_nfb96_c1,   ROT0, "Amcoe",   "New Fruit Bonus '96 Special Edition (v3.62, C1 PCB)",          0,                 layout_nfb96 ) /* ver. 00-3.62 C1 Sub-PCB */
