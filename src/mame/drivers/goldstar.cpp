@@ -19186,4 +19186,5 @@ GAMEL( 1997, crazybona, crazybon, crazybon, crazybon, goldstar_state, empty_init
 /* other possible stealth sets:
  - cmv4a    ---> see the 1fxx zone. put a bp in 1f9f to see the loop.
                  the game has tetris graphics inside.
+		 about cmv4a , even if the erpoms 5-6-7 support tetris stealth game (GFX only) , the cmv4a is a regular cherry master 89 version . 
 */
