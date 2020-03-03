@@ -40,6 +40,8 @@
   W-7   Skill Chance
   W-8   Bonus Chance
   W-11  Lucky Star
+  W-15  Lucky Bells
+  W-17  Lucky Bank
 
 
   * New Lucky 8 Lines:
