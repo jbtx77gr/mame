@@ -4831,8 +4831,8 @@ static INPUT_PORTS_START( schery97 )
 
 	PORT_START("DSW4")
 	PORT_DIPNAME( 0x01, 0x01, "Check Account" )                         PORT_DIPLOCATION("DSW4:1")  /* OK */
-	PORT_DIPSETTING(    0x00, DEF_STR( No ) )
-	PORT_DIPSETTING(    0x01, DEF_STR( Yes ) )
+	PORT_DIPSETTING(    0x00, DEF_STR( Yes ) )
+	PORT_DIPSETTING(    0x01, DEF_STR( No ) )
 	PORT_DIPNAME( 0x02, 0x00, "Show In Confirm Screen" )                PORT_DIPLOCATION("DSW4:2")  /* OK */
 	PORT_DIPSETTING(    0x00, "Level of Difficulty" )   /* percentage in the manual */
 	PORT_DIPSETTING(    0x02, "Percentage" )            /* level of difficulty in the manual */
@@ -4840,8 +4840,8 @@ static INPUT_PORTS_START( schery97 )
 	PORT_DIPSETTING(    0x00, "Type 1" )
 	PORT_DIPSETTING(    0x04, "Type 2" )
 	PORT_DIPNAME( 0x08, 0x08, "Bonus Accumulation" )                    PORT_DIPLOCATION("DSW4:4")  /* OK (need a reset after change) */
-	PORT_DIPSETTING(    0x00, DEF_STR( No ) )
-	PORT_DIPSETTING(    0x08, DEF_STR( Yes ) )
+	PORT_DIPSETTING(    0x00, DEF_STR( Yes ) )
+	PORT_DIPSETTING(    0x08, DEF_STR( No ) )
 	PORT_DIPNAME( 0x10, 0x10, "Auto Ticket Dispense" )                  PORT_DIPLOCATION("DSW4:5")  /* OK (need a reset after change) */
 	PORT_DIPSETTING(    0x00, DEF_STR( No ) )
 	PORT_DIPSETTING(    0x10, DEF_STR( Yes ) )
@@ -5014,8 +5014,8 @@ static INPUT_PORTS_START( nfb96 )
 
 	PORT_START("DSW4")
 	PORT_DIPNAME( 0x01, 0x01, "Check Account" )                         PORT_DIPLOCATION("DSW4:1")  /* OK */
-	PORT_DIPSETTING(    0x00, DEF_STR( No ) )
-	PORT_DIPSETTING(    0x01, DEF_STR( Yes ) )
+	PORT_DIPSETTING(    0x00, DEF_STR( Yes ) )
+	PORT_DIPSETTING(    0x01, DEF_STR( No ) )
 	PORT_DIPNAME( 0x02, 0x00, "Show In Confirm Screen" )                PORT_DIPLOCATION("DSW4:2")  /* OK */
 	PORT_DIPSETTING(    0x00, "Level of Difficulty" )   /* percentage in the manual */
 	PORT_DIPSETTING(    0x02, "Percentage" )            /* level of difficulty in the manual */
@@ -5023,8 +5023,8 @@ static INPUT_PORTS_START( nfb96 )
 	PORT_DIPSETTING(    0x00, "Type 1" )
 	PORT_DIPSETTING(    0x04, "Type 2" )
 	PORT_DIPNAME( 0x08, 0x08, "Bonus Accumulation" )                    PORT_DIPLOCATION("DSW4:4")  /* OK (need a reset after change) */
-	PORT_DIPSETTING(    0x00, DEF_STR( No ) )
-	PORT_DIPSETTING(    0x08, DEF_STR( Yes ) )
+	PORT_DIPSETTING(    0x00, DEF_STR( Yes ) )
+	PORT_DIPSETTING(    0x08, DEF_STR( No ) )
 	PORT_DIPNAME( 0x10, 0x10, "Auto Ticket Dispense" )                  PORT_DIPLOCATION("DSW4:5")  /* OK (need a reset after change) */
 	PORT_DIPSETTING(    0x00, DEF_STR( No ) )
 	PORT_DIPSETTING(    0x10, DEF_STR( Yes ) )
@@ -5182,8 +5182,8 @@ static INPUT_PORTS_START( nfb96tx )
 
 	PORT_START("DSW4")
 	PORT_DIPNAME( 0x01, 0x01, "Check Account" )                         PORT_DIPLOCATION("DSW4:1")  /* OK */
-	PORT_DIPSETTING(    0x00, DEF_STR( No ) )
-	PORT_DIPSETTING(    0x01, DEF_STR( Yes ) )
+	PORT_DIPSETTING(    0x00, DEF_STR( Yes ) )
+	PORT_DIPSETTING(    0x01, DEF_STR( No ) )
 	PORT_DIPNAME( 0x02, 0x00, DEF_STR( Unknown ) )                      PORT_DIPLOCATION("DSW4:2")  /* unknown */
 	PORT_DIPSETTING(    0x00, DEF_STR( Off ) )
 	PORT_DIPSETTING(    0x02, DEF_STR( On ) )
@@ -5191,8 +5191,8 @@ static INPUT_PORTS_START( nfb96tx )
 	PORT_DIPSETTING(    0x00, "Type 1" )
 	PORT_DIPSETTING(    0x04, "Type 2" )
 	PORT_DIPNAME( 0x08, 0x08, "Bonus Accumulation" )                    PORT_DIPLOCATION("DSW4:4")  /* OK (need a reset after change) */
-	PORT_DIPSETTING(    0x00, DEF_STR( No ) )
-	PORT_DIPSETTING(    0x08, DEF_STR( Yes ) )
+	PORT_DIPSETTING(    0x00, DEF_STR( Yes ) )
+	PORT_DIPSETTING(    0x08, DEF_STR( No ) )
 	PORT_DIPNAME( 0x10, 0x00, DEF_STR( Unknown ) )                      PORT_DIPLOCATION("DSW4:5")  /* unknown */
 	PORT_DIPSETTING(    0x00, DEF_STR( Off ) )
 	PORT_DIPSETTING(    0x10, DEF_STR( On ) )
@@ -5500,8 +5500,8 @@ static INPUT_PORTS_START( roypok96 )
 
 	PORT_START("DSW4")
 	PORT_DIPNAME( 0x01, 0x01, "Check Account" )                         PORT_DIPLOCATION("DSW4:1")  /* OK */
-	PORT_DIPSETTING(    0x00, DEF_STR( No ) )
-	PORT_DIPSETTING(    0x01, DEF_STR( Yes ) )
+	PORT_DIPSETTING(    0x00, DEF_STR( Yes ) )
+	PORT_DIPSETTING(    0x01, DEF_STR( No ) )
 	PORT_DIPNAME( 0x02, 0x00, "Show Coin In Limit" )                    PORT_DIPLOCATION("DSW4:2")  /* OK */
 	PORT_DIPSETTING(    0x00, DEF_STR( Yes ) )
 	PORT_DIPSETTING(    0x02, DEF_STR( No ) )
