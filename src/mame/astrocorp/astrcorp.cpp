@@ -48,7 +48,7 @@ Year + Game                PCB ID                    CPU                Video   
 07  Happy Farm (US.01.02B) _P_ROHS                   ASTRO V102PX-008   ASTRO V07      ASTRO ROHS BA21C00009 M835KK01             Encrypted
 11  Happy Farm (IN.01.02B) P1                        ASTRO V102PX-008   ASTRO V07      ASTRO ROHS BA21C00009 N011483              Encrypted
 13  Monkey Land (EN.20B)   N1                        ASTRO V102PX-005   ASTRO V05      ?                                          Encrypted
-14  Magic Bomb (BR.71A)    P1                        ASTRO V102PX-014   ASTRO V07      ASTRO ROHS BA21C00009 JF13022              Encrypted
+14  Magic Bomb (BR.71A)    P1 CS350P087              ASTRO V102PX-014   ASTRO V07      ASTRO ROHS BA21C00009 JF13022              Encrypted
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Note: ASTRO F01 is a QuickLogic pASIC 3 FPGA (die-marked as QL3161A/1999).
